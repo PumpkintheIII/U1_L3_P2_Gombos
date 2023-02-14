@@ -6,17 +6,18 @@
 #include <stdio.h> //import input and output functions
 
 int main(void) { //define main function
-  float seconds, minutes; //intialize variable as float
+  int seconds, minutes, remainder; //initialize variable as integer
 
   printf("This program allows you to enter an amount of seconds and the program will convert them to minutes. You will get one prompt:\n\t- Seconds: Please enter your seconds here\n"); //instructions
   
   printf("Seconds: "); //ask user for input
-  scanf("%f", &seconds); //accept input and format as float
+  scanf("%d", &seconds); //accept input and format as float
 
   minutes = seconds/60; //convert seconds to minutes
+  remainder = seconds%60; //find the remaining seconds
 
   //print output:
-  printf("%0.3f seconds is equal to %0.3f minutes.", seconds, minutes);
+  printf("%d seconds is equal to %d minutes and %d seconds.", seconds, minutes, remainder);
   
   return 0;
 }
